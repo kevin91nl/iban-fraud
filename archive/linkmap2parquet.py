@@ -30,7 +30,6 @@ class LinkMapImportJob(CCSparkJob):
           .sortWithinPartitions('s', 't') \
           .write \
           .format(self.args.output_format) \
-          .option("compression", self.args.output_compression) \
           .saveAsTable(self.args.output)
 
 

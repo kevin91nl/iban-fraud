@@ -350,8 +350,7 @@ class CCIndexSparkJob(CCSparkJob):
         sqldf = self.load_dataframe(sc, self.args.num_output_partitions)
 
         sqldf.write \
-            .format(self.args.output_format) \
-            .option("compression", self.args.output_compression) \
+            .format(self.args.output_format)\
             .saveAsTable(self.args.output)
 
         self.log_aggregators(sc)
@@ -414,7 +413,6 @@ class CCIndexWarcSparkJob(CCIndexSparkJob):
             .coalesce(self.args.num_output_partitions) \
             .write \
             .format(self.args.output_format) \
-            .option("compression", self.args.output_compression) \
             .saveAsTable(self.args.output)
 
         self.log_aggregators(sc)

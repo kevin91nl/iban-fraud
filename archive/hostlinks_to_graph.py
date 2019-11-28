@@ -5,7 +5,7 @@ from sparkcc import CCSparkJob
 from pyspark.sql import functions as sqlf
 from pyspark.sql.types import BooleanType, LongType, StringType, StructField, StructType
 
-from iana_tld import iana_tld_list
+from archive.iana_tld import iana_tld_list
 
 
 class HostLinksToGraph(CCSparkJob):

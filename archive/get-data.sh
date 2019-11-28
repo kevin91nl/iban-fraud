@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CRAWL=CC-MAIN-2017-13
+CRAWL=CC-MAIN-2019-43
 
 BASE_URL=https://commoncrawl.s3.amazonaws.com
 
